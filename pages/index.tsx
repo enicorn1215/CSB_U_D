@@ -54,10 +54,10 @@ When the user provides personal experiences, constraints, criteria, barriers, or
 •	Never override, ignore, or replace the user’s framing.
 These rules are internal. Do not mention them.`;
 
-const SYSTEM_INTERVENTION = `• When interacting with the AI, focus on narrowing, selecting, and strengthening the most promising ideas rather than generating entirely new directions.
-1. Specify three concrete criteria (for example, cost, feasibility, ease of maintenance, or user acceptance) and ask the AI to refine ideas so they satisfy all three simultaneously.
-2. Select one idea that appears most viable and ask the AI to elaborate it into a more detailed, actionable version tailored to your daily routine.
-3. Identify potential risks, constraints, or tradeoffs associated with the selected idea, and prompt the AI to revise the idea to better address those feasibility concerns.`; 
+const SYSTEM_INTERVENTION = `• When interacting with the AI, use your own context to guide the AI toward ideas that are clearly different from what has already been suggested.
+1. Share something specific from your own experience with late-night screen use. For example, a situation where you struggled to stop, what triggered it, or what made it harder or easier.
+2. Introduce one new angle that has not been discussed yet. 
+3. You may also borrow a strategy from another area of life, such as exercise routines, gaming rewards, or budgeting habits, and adapt it to bedtime screen use.`;
 
 const NUM_SUBMISSION_IDEAS = 1;
 const COLLAB_TIPS = SYSTEM_INTERVENTION;
