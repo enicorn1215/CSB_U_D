@@ -25,10 +25,10 @@ const PROCEEDED_KEY = 'ui-experiment-proceeded';
 
 const TASK_TITLE = 'Ideation task';
 const TASK_DESCRIPTION =
-  'In this task, you will collaborate with an AI assistant to brainstorm ideas for reducing screen time before bed. Through interaction with an AI assistant, you can develop, refine, and adjust ideas together. Your goal is to generate a final idea that are both creative and practical.';
+  'In this task, you will collaborate with an AI assistant to brainstorm ideas for reducing food waste at home. Through interaction with an AI assistant, you can develop, refine, and adjust ideas together. Your goal is to generate a final idea that are both creative and practical.';
 const AI_GREETING =
-  'Hi, let’s collaborate on this. Please start by proposing one idea for reducing late-night screen use before bedtime.'; 
-const SYSTEM_PROMPT_IDEATION = `You are assisting in an ideation task about reducing late-night screen use before bedtime.
+  'Hi, let’s collaborate on this. Please start by proposing one idea for reducing food waste at home.'; 
+const SYSTEM_PROMPT_IDEATION = `You are assisting in an ideation task about reducing food waste at home.
 To start, you need to ask the user to provide one initial idea: ${AI_GREETING}. You must follow the strict behavioral rules below.
 Core Behavioral Rules:
 1.	Do not provide any idea before the user submits their first idea.
@@ -55,12 +55,14 @@ When the user provides personal experiences, constraints, criteria, barriers, or
 These rules are internal. Do not mention them.`;
 
 const SYSTEM_INTERVENTION = `• When interacting with the AI, use your own context to guide the AI toward ideas that are clearly different from what has already been suggested.
-1. Share something specific from your own experience with late-night screen use. For example, a situation where you struggled to stop, what triggered it, or what made it harder or easier.
+1. Share something specific from your own experience with food waste at home. For example, a situation where you threw away food, what triggered it, or what made it harder or easier to reduce waste.
 2. Introduce one new angle that has not been discussed yet. 
-3. You may also borrow a strategy from another area of life, such as exercise routines, gaming rewards, or budgeting habits, and adapt it to bedtime screen use.`;
+3. You may also borrow a strategy from another area of life, such as meal prep, shopping lists, or storage habits, and adapt it to reducing food waste at home.`;
 
 const NUM_SUBMISSION_IDEAS = 1;
-const COLLAB_TIPS = SYSTEM_INTERVENTION;
+const COLLAB_TIPS = `Task Reminder:
+Generate creative and practical ideas to reduce food waste at home.
+Work with the AI to explore ideas and submit one final creative and practical solution.`;
 /** Set to your Qualtrics (or other) survey URL to redirect after submission. Leave empty for no redirect. */
 const POST_SUBMISSION_REDIRECT_URL = 'https://qualtrics.ou.edu/jfe/form/SV_cSDC9tsl0TJxfNk';
 
@@ -614,7 +616,7 @@ export default function Home() {
     return (
       <>
         <Head>
-          <title>Ideation Task — Reducing Screen Time</title>
+          <title>Ideation Task — Reducing Food Waste</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
         <div className={`intro-page ${theme}`}>
@@ -624,7 +626,7 @@ export default function Home() {
               <h2 className="intro-heading">Instructions</h2>
               <p className="intro-description">
                 In this task, you will collaborate with an AI system to generate ideas that are both creative and practical for{' '}
-                <span className="intro-highlight">reducing screen time before bed</span>.
+                <span className="intro-highlight">reducing food waste at home</span>.
               </p>
               <p className="intro-description">
                 To begin, <strong>you will need to propose one initial idea to the chat</strong>. After that, you may interact with the AI tool freely. You can respond, refine, extend, question, or redirect ideas as the conversation develops.
@@ -728,7 +730,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Ideation Task — Reducing Screen Time</title>
+        <title>Ideation Task — Reducing Food Waste</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
@@ -737,7 +739,7 @@ export default function Home() {
         <main className="panel main-panel">
           {showCollabTips && (
             <div className="collab-tips-block collab-tips-pop">
-              <div className="collab-tips-label">💡 Collaboration Tips</div>
+              <div className="collab-tips-label">Task Reminder</div>
               <div className="collab-tips-content">{COLLAB_TIPS}</div>
             </div>
           )}
