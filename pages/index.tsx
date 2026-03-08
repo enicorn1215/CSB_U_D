@@ -67,9 +67,8 @@ const SYSTEM_INTERVENTION = `• When interacting with the AI, use your own cont
 3. You may also borrow a strategy from another area of life, such as meal prep, shopping lists, or storage habits, and adapt it to reducing food waste at home.`;
 
 const NUM_SUBMISSION_IDEAS = 1;
-const COLLAB_TIPS = `Task Reminder:
-Generate creative and practical ideas to reduce food waste at home.
-Work with the AI to explore ideas and submit one final creative and practical solution.`;
+const COLLAB_TIPS = `• Generate creative and practical ideas to reduce food waste at home.
+• Work with the AI to explore ideas and submit one final creative and practical solution.`;
 /** Set to your Qualtrics (or other) survey URL to redirect after submission. Leave empty for no redirect. */
 const POST_SUBMISSION_REDIRECT_URL = 'https://qualtrics.ou.edu/jfe/form/SV_cSDC9tsl0TJxfNk';
 
