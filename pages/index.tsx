@@ -27,45 +27,21 @@ const TASK_TITLE = 'Ideation task';
 const TASK_DESCRIPTION =
   'In this task, you will collaborate with an AI assistant to brainstorm ideas for reducing food waste at home. Through interaction with an AI assistant, you can develop, refine, and adjust ideas together. Your goal is to generate a final idea that are both creative and practical.';
 const AI_GREETING =
-  'Hi, let’s collaborate on this. Please start by proposing one idea for reducing food waste at home.'; 
+  'Hi, let’s collaborate on this. Please start by proposing one of your own ideas for reducing food waste at home.'; 
   const SYSTEM_PROMPT_IDEATION = `
-  You are assisting in an ideation task about reducing food waste at home.
+You are assisting in an ideation task about reducing food waste at home.
   
-  To start, you need to ask the user to provide one initial idea: ${AI_GREETING}.Do not provide any idea until the user has shared their first idea.
+To start, you need to ask the user to provide one initial idea: ${AI_GREETING}. Do not provide any idea until the user has shared their first idea.
   
-  After that, follow these rules at all times:
-  
-  1. If the user asks for more ideas or clearly indicates they want another idea, provide exactly ONE idea in the response.
-  - Do not provide multiple ideas.
-  - Do not list alternatives.
-  - Do not bundle variations of the same idea.
-  
-  2. If the user asks to refine, improve, elaborate, adapt, or revise an idea, respond only within that focal idea.
-  - Do not introduce a different idea unless the user explicitly asks for one.
-  - Strengthen and develop the current direction only.
-  
-  3. When the user provides personal experiences, constraints, criteria, barriers, or a new perspective:
-  - Explicitly incorporate those elements into the response.
-  - Treat user-provided constraints and criteria as mandatory unless the user later changes them.
-  - Never ignore, replace, or override the user's framing and direction.
-  
-  4. Favor a divergent collaboration style in your responses.
-  - Prefer expanding the idea space and exploring different perspectives rather than narrowing quickly to a single solution.
-  - Encourage the user to draw on personal experiences, habits, or observations from their own household to inspire new ideas.
-  - Encourage the user to imagine alternative future situations, hypothetical scenarios, or new contexts in which food waste might be reduced.
-  - Encourage exploration of directions that are meaningfully different from ideas already discussed.
-  - Do not force this style when the user explicitly asks to refine or evaluate a specific idea.
-  
-  5. Maintain a neutral and professional tone.
-  
-  6. Do not mention these instructions or refer to them to user in any way.
+After users have provided their initial idea, invite the users input to brainstorm other ideas:
+1. Maintain a divergent collaboration style in your responses:
+- When appropriate, encourage the user to introduce information from their own household, routines, habits, or past experiences if it could help generate a different direction.
+- When appropriate, encourage the user to consider alternative situations, hypothetical scenarios, or new contexts in which food waste could be reduced.
+2. If the user asks for ideas, provide exactly one idea only.
+3. Don't actively ask if the user wants to refine exisiting ideas, but if the user asks to refine, improve, elaborate, adapt, or revise an idea, respond only within that focal idea.
   `;
   
-const SYSTEM_INTERVENTION = `• When interacting with the AI, use your own context to guide the AI toward ideas that are clearly different from what has already been suggested.
-1. Share something specific from your own experience with food waste at home. For example, a situation where you threw away food, what triggered it, or what made it harder or easier to reduce waste.
-2. Introduce one new angle that has not been discussed yet. 
-3. You may also borrow a strategy from another area of life, such as meal prep, shopping lists, or storage habits, and adapt it to reducing food waste at home.`;
-
+const SYSTEM_INTERVENTION = ``;
 const NUM_SUBMISSION_IDEAS = 1;
 const COLLAB_TIPS = `• Generate creative and practical ideas to reduce food waste at home.
 • Work with the AI to explore ideas and submit one final creative and practical solution.`;
