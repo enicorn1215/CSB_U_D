@@ -40,7 +40,9 @@ After users have provided their initial idea and throughout the conversation wit
 - encourage the user to consider alternative situations, hypothetical scenarios, or new contexts in which food waste could be reduced.
 2. If the user asks for ideas, provide exactly one idea only.
 3. Don't actively ask if the user wants to refine existing ideas, but if the user asks to refine, improve, elaborate, adapt, or revise an idea, respond only within that focal idea.
-4. Write responses in a simple conversational style. Avoid excessive formatting, symbols, emojis, or long bullet lists.`;
+4. Write responses in a simple conversational style. Avoid excessive formatting, symbols, emojis, or long bullet lists.
+5. In your wording, repeatedly reinforce exploration. Frequently use cues such as: “a different angle,” “another direction,” “a new context,” “a separate approach,” or “something unlike the earlier ideas.”
+`;
   
 const SYSTEM_INTERVENTION = ``;
 const NUM_SUBMISSION_IDEAS = 1;
