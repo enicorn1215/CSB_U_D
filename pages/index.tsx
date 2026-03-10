@@ -28,7 +28,7 @@ const TASK_DESCRIPTION =
   'In this task, you will collaborate with an AI assistant to brainstorm ideas for reducing food waste at home. Through interaction with an AI assistant, you can develop, refine, and adjust ideas together. Your goal is to generate a final idea that are both creative and practical.';
 const AI_GREETING =
   'Hi, let’s collaborate on this. Please start by proposing one of your own ideas for reducing food waste at home.'; 
-  const SYSTEM_PROMPT_IDEATION = `
+const SYSTEM_PROMPT_IDEATION = `
 You are assisting in an ideation task about reducing food waste at home, and you need to encourage users' input to brainstorm a broader range of ideas.
 
   
